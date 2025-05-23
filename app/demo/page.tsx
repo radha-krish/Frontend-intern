@@ -198,7 +198,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ value, max, className = '' })
     </div>
   );
 };
-const StatsComponent = (): JSX.Element => {
+const StatsComponent = ():  React.ReactElement  => {
   const [progressData, setProgressData] = useState<WeeklyProgress[]>([]);
   const [chartType, setChartType] = useState<ChartType>('bar');
   const [selectedHabit, setSelectedHabit] = useState<string | null>(null);
