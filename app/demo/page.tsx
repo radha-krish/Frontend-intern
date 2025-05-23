@@ -2,27 +2,22 @@
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect, ReactNode } from 'react';
-import { BarChart2, LineChart as LineIcon , Flame, Calendar, Clock, Quote, ChevronDown, ChevronUp, UserCircle,Mail, Phone, MapPin, Linkedin, Github, Globe } from 'lucide-react';
+import { BarChart2, LineChart as LineIcon, Calendar, Clock, ChevronDown, ChevronUp, UserCircle } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import {
   HiHome,
   HiClipboardCheck,
   HiChartBar,
-  HiFire,
-  HiCog,
   HiUser,
   HiSwitchHorizontal,
-  HiOutlineFire, HiOutlineSparkles,HiOutlineHeart,
-  
+  HiOutlineFire, HiOutlineSparkles, HiOutlineHeart,
   HiPlus,
   HiX,
   HiCheck,
   HiTrash,
   HiPencil,
-  
- 
-
 } from 'react-icons/hi';
+
 
 interface NavbarProps {
   activeSection: string;
@@ -389,7 +384,7 @@ const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
           <p className="mt-2 text-white/80 text-sm text-center md:text-left">
             Build better habits, one day at a time.
           </p>
-          <p className="mt-2 text-white/70 italic text-sm">"{quote}"</p>
+          <p className="mt-2 text-white/70 italic text-sm">{quote}</p>
         </motion.div>
 
         {/* Quick Links */}
