@@ -1,8 +1,10 @@
 'use client';
-import { useRouter } from 'next/navigation';
+/* eslint-disable */
+
+// import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect, ReactNode } from 'react';
-import { BarChart2, LineChart as LineIcon, Calendar, Clock, ChevronDown, ChevronUp, UserCircle } from 'lucide-react';
+import { BarChart2, LineChart as LineIcon , Flame, Calendar, Clock, Quote, ChevronDown, ChevronUp, UserCircle, Linkedin, Github,  } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import {
   HiHome,
@@ -10,14 +12,17 @@ import {
   HiChartBar,
   HiUser,
   HiSwitchHorizontal,
-  HiOutlineFire, HiOutlineSparkles, HiOutlineHeart,
+  HiOutlineFire, HiOutlineSparkles,HiOutlineHeart,
+  
   HiPlus,
   HiX,
   HiCheck,
   HiTrash,
   HiPencil,
-} from 'react-icons/hi';
+  
+ 
 
+} from 'react-icons/hi';
 
 interface NavbarProps {
   activeSection: string;
@@ -886,7 +891,7 @@ const TodaysHabits: React.FC<TodaysHabitsProps> = ({ habits , onHabitUpdate }) =
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Today's Habits
+          Todays Habits
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -1285,7 +1290,7 @@ const ProfileComponent = ({ user }:{ user: User }) => {
           <motion.div className="mb-4" variants={itemVariants}>
             <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-violet-500 relative">
               <Quote size={16} className="text-violet-500 absolute top-2 left-2 opacity-20" />
-              <p className="text-gray-700 italic pl-5">"{user.quote}"</p>
+              <p className="text-gray-700 italic pl-5">{user.quote}</p>
             </div>
           </motion.div>
 
@@ -1352,7 +1357,7 @@ const ProfileComponent = ({ user }:{ user: User }) => {
   );
 };
 const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
-  const router = useRouter();
+  // const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
